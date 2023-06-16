@@ -1,5 +1,5 @@
 let chatHistory = [];
-const username = "you";
+
 
 function openChatPage() {
     document.getElementById("chatContainer").style.display = "block";

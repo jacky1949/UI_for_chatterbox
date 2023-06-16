@@ -2,6 +2,10 @@ let selectedFile = null;
 let chatHistory = [];
 const username = "you";
 const BASE = "http://127.0.0.1:5000/";
+let initialResponse = null;
+
+
+
 
 document.getElementById("uploadForm").addEventListener("submit", function(event) {  
   event.preventDefault(); // Prevent the default form submission
@@ -59,7 +63,7 @@ function uploadFile(file) {
   })
   .then(data => {
     if (data.hasOwnProperty("response")) {
-      globalResponse = data;
+      initialResponse = data;
       console.log("PDF file uploaded successfully!");
       window.alert("Upload successful!");
       //window.location.href = "chat.html";
