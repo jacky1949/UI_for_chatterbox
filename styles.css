@@ -1,0 +1,118 @@
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f2f2f7;
+}
+
+.container {
+  max-width: 600px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.website-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.welcome-message {
+  font-size: 18px;
+  color: #777777;
+  margin-top: 10px;
+}
+
+.upload-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.upload-area {
+  border: 2px dashed #cccccc;
+  border-radius: 10px;
+  padding: 40px;
+  color: #aaaaaa;
+  cursor: pointer;
+}
+
+.upload-area:hover {
+  border-color: #777777;
+  color: #777777;
+}
+
+.upload-area.dragging {
+  border-color: #777777;
+  color: #777777;
+  background-color: #f5f5f5;
+}
+
+.upload-message {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #777777;
+}
+
+.upload-button {
+  background-color: #0070c9;
+  color: #ffffff;
+  border: none;
+  padding: 12px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload-button:hover {
+  background-color: #005ea6;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.file-label {
+  display: inline-block;
+  background-color: #eeeeee;
+  padding: 8px 16px;
+  border-radius: 5px;
+  margin-top: 20px;
+  color: #777777;
+}
+
+.start-button {
+  background-color: #ff9500;
+  color: #ffffff;
+  border: none;
+  padding: 12px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.start-button:hover {
+  background-color: #f58000;
+}

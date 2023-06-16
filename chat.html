@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ChatterboxPDF Chat</title>
+  <link rel="stylesheet" type="text/css" href="chatstyle.css">
+</head>
+
+<body>
+  <div class="chat-container">
+    <div class="chat-header">
+      <h1 class="chat-title">ChatterboxPDF Chat</h1>
+      <button class="close-button" onclick="window.location.href = 'home.html'">Close</button>
+    </div>
+    <div class="chat-history" id="chatHistory"></div>
+    <div class="chat-input">
+      <input type="text" id="messageInput" placeholder="Type your message...">
+      <button class="send-button" onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+  <script src="chat.js"></script>
+</body>
+
+</html>
