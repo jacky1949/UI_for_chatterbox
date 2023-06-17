@@ -52,9 +52,11 @@
     padding: 20px;
   }
   
-  .chat-entry {
-    margin-bottom: 10px;
+  .chat-entry.received .chat-name {
+    font-weight: bold;
+    color: rgb(112, 112, 192);
   }
+  
   
   .sent {
     text-align: right;

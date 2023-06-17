@@ -1,10 +1,11 @@
 let selectedFile = null;
 let chatHistory = [];
-const username = "you";
 const BASE = "http://127.0.0.1:5000/";
-let initialResponse = null;
 
+const username = 'you'
 
+//store these variables gobally so other html pages can use it.
+localStorage.setItem('username',username)
 
 
 document.getElementById("uploadForm").addEventListener("submit", function(event) {  
@@ -47,11 +48,10 @@ function handleFileDrop(event) {
 }
 
 
-console.log("b4 upload");
+
 function uploadFile(file) {
   const formData = new FormData();
   formData.append("file", file);
-  console.log("b4 fetch");
   fetch(BASE + 'upload/pdf', {
     method: "POST",
     body: formData,
@@ -63,7 +63,7 @@ function uploadFile(file) {
   })
   .then(data => {
     if (data.hasOwnProperty("response")) {
-      initialResponse = data;
+      localStorage.setItem('initialResponse', JSON.stringify(data)); //so other pages can use this variable
       console.log("PDF file uploaded successfully!");
       window.alert("Upload successful!");
       //window.location.href = "chat.html";
@@ -75,7 +75,7 @@ function uploadFile(file) {
     console.error(error);
   });
 }
-console.log("after upload");
+
 document.getElementById("startButton").addEventListener("click", function() {
   window.location.href = "chat.html";
 });
