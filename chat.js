@@ -96,7 +96,7 @@ function openChatPage() {
     // Display other chat messages
     for (let i = 0; i < chatHistory.length; i++) {
       const chatEntry = document.createElement("div");
-      chatEntry.className = "chat-entry " + chatHistory[i].role;
+      chatEntry.className = "chat-entry received " + chatHistory[i].role;
       chatEntry.innerHTML = "<span class='chat-name'>" + chatHistory[i].role + "</span>: " + chatHistory[i].content;
       chatHistoryContainer.appendChild(chatEntry);
     }
