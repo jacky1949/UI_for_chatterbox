@@ -5,9 +5,8 @@ const username = localStorage.getItem('username')
 const initialResponse = JSON.parse(localStorage.getItem('initialResponse'));
 //initialize chatHistory, add the response we received after the pdf has been uploaded.
 let chatHistory = [] //clear all history when open a new caht page.
- chatHistory = [{"role" : "assistant", "content" : initialResponse.response}];
-// Display initial response by default
- displayChatHistory();
+chatHistory = [{"role" : "assistant", "content" : initialResponse.response}];
+displayChatHistory();
 
 function openChatPage() {
     document.getElementById("chatContainer").style.display = "block";
@@ -87,22 +86,21 @@ function openChatPage() {
     chatHistoryContainer.innerHTML = "";
   
     // Display initial response
-    if (initialResponse) {
-      const initialResponseEntry = document.createElement("div");
-      initialResponseEntry.className = "chat-entry received";
-      initialResponseEntry.innerHTML = "<span class='chat-name'>Chatbot: </span>" + initialResponse.response;
-      chatHistoryContainer.appendChild(initialResponseEntry);
-    }
+    // if (initialResponse) {
+    //   const initialResponseEntry = document.createElement("div");
+    //   initialResponseEntry.className = "chat-entry received";
+    //   initialResponseEntry.innerHTML = "<span class='chat-name'>Chatbot: </span>" + initialResponse.response;
+    //   chatHistoryContainer.appendChild(initialResponseEntry);
+    // }
   
     // Display other chat messages
     for (let i = 0; i < chatHistory.length; i++) {
       const chatEntry = document.createElement("div");
       chatEntry.className = "chat-entry " + chatHistory[i].role;
-      chatEntry.innerHTML = "<span class='chat-name'>" + chatHistory[i].role + ": </span>" + chatHistory[i].content;
+      chatEntry.innerHTML = "<span class='chat-name'>" + chatHistory[i].role + "</span>: " + chatHistory[i].content;
       chatHistoryContainer.appendChild(chatEntry);
     }
   }
-  
   
 
 
