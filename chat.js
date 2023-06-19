@@ -47,13 +47,13 @@ function openChatPage() {
 
 
   function sendRequestToServer(message) {
-  
-    request =  {
+    
+    ori_request =  {
       
-        conversation_history : chatHistory,
-        current_message : { "role" : username, "content" : message }
+        'conversation_history' : chatHistory,
+        'current_message' : { "role" : username, "content" : message }
     }
-  
+    request = JSON.stringify(ori_request) 
     // Send the request to the backend server
     fetch(BASE + 'chat', {
       method: "POST",
